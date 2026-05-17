@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 6</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        img {
+
+    width:100%;
+
+    max-width:700px;
+
+    height:auto;
+
+    margin-top:30px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.7);
+
+    border:2px solid rgba(255,255,255,0.08);
+}
+
+
+        body{
+            overflow-y:auto;
+        overflow-x:hidden;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #fundo-escuro{
+            flex-direction: column;
+            width:100vw;
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            /* ===== OVERLAY + IMAGEM ===== */
+
+            background:
+            linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.88)
+            ),
+
+            url('Fundo pg1.png');
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+
+        main{
+            width:70%;
+            max-width:1000px;
+            margin-bottom: 1em;
+            padding:60px;
+
+            background:rgba(0,0,0,0.35);
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            backdrop-filter:blur(4px);
+
+            border-radius:10px;
+
+            color:white;
+
+            text-align:center;
+
+            box-shadow:
+            0 0 40px rgba(0,0,0,0.6);
+        }
+
+        h1{
+            text-align: left;
+            font-size:4rem;
+            margin-bottom:30px;
+            color:#f4d8a4;
+            /* letter-spacing:4px; */
+            /* text-transform:uppercase; */
+        }
+
+        p{
+            font-size:1.2rem;
+            text-align: justify;
+            line-height:2;
+            color:rgba(255,255,255,0.85);
+        }
+
+    .botao1, .botao2 {
+        padding-right: 1em;
+    }
+
+    .menu button{
+
+      width:320px;
+      padding:18px;
+      margin: 1em 1em;
+
+      background:linear-gradient(
+      180deg,
+      rgba(70,0,0,0.9),
+      rgba(15,15,15,0.95));
+
+      border:2px solid #a11;
+      color:#f4d8a4;
+
+      font-size:1.2rem;
+      letter-spacing:3px;
+      text-transform:uppercase;
+
+      cursor:pointer;
+
+      transition:0.3s;
+
+      box-shadow:
+      0 0 10px rgba(255,0,0,0.3),
+      inset 0 0 10px rgba(255,255,255,0.08);
+    }
+
+    .menu button:hover{
+
+      transform:scale(1.05);
+
+      background:linear-gradient(
+      180deg,
+      rgba(120,0,0,1),
+      rgba(30,0,0,1));
+
+      box-shadow:
+      0 0 25px rgba(255,0,0,0.7),
+      0 0 50px rgba(255,120,0,0.3);
+    }
+
+    /* ===== DETAILS ===== */
+
+details{
+
+    width:100%;
+
+    margin-top:35px;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(40,0,0,0.85),
+    rgba(10,10,10,0.95));
+
+    border:2px solid rgba(180,20,20,0.5);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.6),
+    inset 0 0 10px rgba(255,255,255,0.04);
+
+    transition:0.3s;
+}
+
+/* ===== HOVER ===== */
+
+details:hover{
+
+    transform:scale(1.01);
+
+    box-shadow:
+    0 0 30px rgba(120,0,0,0.5);
+}
+
+/* ===== SUMMARY ===== */
+
+summary{
+
+    padding:22px;
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+    letter-spacing:3px;
+
+    color:#f4d8a4;
+
+    text-transform:uppercase;
+
+    list-style:none;
+
+    position:relative;
+
+    transition:0.3s;
+}
+
+/* Remove seta padrão */
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+/* Ícone personalizado */
+
+summary::after{
+
+    content:"⚔";
+
+    position:absolute;
+
+    right:25px;
+
+    transition:0.4s;
+}
+
+/* Rotação ao abrir */
+
+details[open] summary::after{
+
+    transform:rotate(180deg);
+}
+
+/* ===== FUNDO INTERNO ===== */
+
+.curiosidade{
+
+    padding:25px;
+
+    border-top:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(0,0,0,0.45);
+
+    color:
+    rgba(255,255,255,0.88);
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    text-align:left;
+}
+
+#fontes {
+    padding-top: 1em;
+}
+
+a{
+
+    color:#d8b16a;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+a:hover{
+
+    color:#f4d8a4;
+
+    text-shadow:
+    0 0 10px rgba(255,215,120,0.6);
+}
+
+@media (max-width: 768px){
+
+    main{
+
+        width:95%;
+
+        padding:25px;
+
+        margin:20px 0;
+    }
+
+    h1{
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        text-align:center;
+    }
+
+    p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+    }
+
+    img{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin-top:20px;
+    }
+
+    .menu{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        margin-bottom:30px;
+    }
+
+    .menu button{
+
+        width:90%;
+
+        max-width:350px;
+
+        font-size:0.95rem;
+
+        letter-spacing:1px;
+
+        padding:15px;
+
+        margin:10px 0;
+    }
+
+    summary{
+
+        font-size:1rem;
+
+        padding:18px;
+    }
+
+    .curiosidade{
+
+        font-size:0.95rem;
+
+        line-height:1.8;
+
+        padding:20px;
+    }
+
+    a{
+
+        word-break:break-word;
+    }
+
+}
+    </style>
+
+</head>
+
+<body>
+
+    <div id="fundo-escuro">
+
+        <main>
+
+<h1>Página 6 — Mitologia Grega no Jogo</h1>
+
+<p>
+A trilogia clássica de God of War é profundamente baseada na mitologia grega, reinterpretando deuses, titãs e criaturas lendárias dentro de uma narrativa sombria e violenta. Em vez de seguir fielmente os mitos originais, o jogo adapta essas figuras para criar uma história de vingança, tragédia e destruição no Olimpo.
+</p>
+
+<p>
+Deuses como Ares, Zeus e Hades são retratados como entidades poderosas, mas falhas, que manipulam o destino dos mortais. Essa abordagem reforça a ideia de que os deuses não são perfeitos, mas sim seres movidos por ego, medo e ambição.
+</p>
+
+<p>
+Além dos deuses, o jogo também explora criaturas míticas como hidras, minotauros e górgonas, transformando esses seres em desafios épicos que reforçam a escala e o perigo do universo de God of War.
+</p>
+
+<details>
+
+    <summary>Saiba Mais!</summary>
+
+    <div class="curiosidade">
+
+        ⚔ Muitas das criaturas e deuses presentes no jogo são baseados em versões clássicas da mitologia grega, mas recebem interpretações visuais mais sombrias e agressivas para se encaixar no estilo brutal da franquia.
+
+    </div>
+
+</details>
+
+<br>
+
+<p>
+📚 Fontes:<br>
+Britannica — Greek Mythology<br>
+<a href="https://www.britannica.com/topic/Greek-mythology">https://www.britannica.com/topic/Greek-mythology</a><br>
+God of War Wiki — <a href="https://godofwar.fandom.com/wiki">https://godofwar.fandom.com/wiki</a><br>
+PlayStation Official — <a href="https://www.playstation.com/en-us/god-of-war/">https://www.playstation.com/en-us/god-of-war/</a>
+</p>
+        </main>
+
+        <div class="menu">
+            <a class="botao1" href="projeto-artbook-god-of-war.html"><button>
+                Voltar ao início
+            </button></a>
+
+            <a  class="botao2" href="pg5.html"><button>
+                Voltar Página 5
+            </button></a>
+
+            <a href="pg7.html"><button>
+                Continuar Página 7
+            </button></a>
+        </div>
+        
+    </div>
+
+</body>
+</html>

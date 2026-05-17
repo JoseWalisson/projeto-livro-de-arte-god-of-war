@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página 16</title>
+
+<style>
+        *{ margin:0; padding:0; box-sizing:border-box; }
+
+        img {
+            width:100%;
+            max-width:700px;
+            height:auto;
+            margin-top:30px;
+            border-radius:10px;
+            object-fit:cover;
+            box-shadow: 0 0 25px rgba(0,0,0,0.7);
+            border:2px solid rgba(255,255,255,0.08);
+        }
+
+        body{
+            overflow-y:auto;
+            overflow-x:hidden;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #fundo-escuro{
+            flex-direction: column;
+            width:100vw;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.88)),
+                url('Fundo pg1.png');
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+
+        main{
+            width:70%;
+            max-width:1000px;
+            margin-bottom:1em;
+            padding:60px;
+            background:rgba(0,0,0,0.35);
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(4px);
+            border-radius:10px;
+            color:white;
+            text-align:center;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+        }
+
+        h1{
+            text-align:left;
+            font-size:4rem;
+            margin-bottom:30px;
+            color:#f4d8a4;
+        }
+
+        p{
+            font-size:1.2rem;
+            text-align:justify;
+            line-height:2;
+            color:rgba(255,255,255,0.85);
+        }
+
+        .botao1, .botao2 { padding-right:1em; }
+
+        .menu button{
+            width:320px;
+            padding:18px;
+            margin:1em 1em;
+            background:linear-gradient(180deg, rgba(70,0,0,0.9), rgba(15,15,15,0.95));
+            border:2px solid #a11;
+            color:#f4d8a4;
+            font-size:1.2rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            cursor:pointer;
+            transition:0.3s;
+            box-shadow: 0 0 10px rgba(255,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.08);
+        }
+
+        .menu button:hover{
+            transform:scale(1.05);
+            background:linear-gradient(180deg, rgba(120,0,0,1), rgba(30,0,0,1));
+            box-shadow: 0 0 25px rgba(255,0,0,0.7), 0 0 50px rgba(255,120,0,0.3);
+        }
+
+        details{
+            width:100%;
+            margin-top:35px;
+            background:linear-gradient(180deg, rgba(40,0,0,0.85), rgba(10,10,10,0.95));
+            border:2px solid rgba(180,20,20,0.5);
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow: 0 0 25px rgba(0,0,0,0.6), inset 0 0 10px rgba(255,255,255,0.04);
+            transition:0.3s;
+        }
+
+        details:hover{
+            transform:scale(1.01);
+            box-shadow: 0 0 30px rgba(120,0,0,0.5);
+        }
+
+        summary{
+            padding:22px;
+            cursor:pointer;
+            font-size:1.3rem;
+            letter-spacing:3px;
+            color:#f4d8a4;
+            text-transform:uppercase;
+            list-style:none;
+            position:relative;
+            transition:0.3s;
+        }
+
+        summary::-webkit-details-marker{ display:none; }
+
+        summary::after{
+            content:"⚔";
+            position:absolute;
+            right:25px;
+            transition:0.4s;
+        }
+
+        details[open] summary::after{ transform:rotate(180deg); }
+
+        .curiosidade{
+            padding:25px;
+            border-top:1px solid rgba(255,255,255,0.08);
+            background:rgba(0,0,0,0.45);
+            color:rgba(255,255,255,0.88);
+            line-height:2;
+            font-size:1.05rem;
+            text-align:left;
+        }
+
+        #fontes { padding-top:1em; }
+
+        a{ color:#d8b16a; text-decoration:none; transition:0.3s; }
+
+        a:hover{
+            color:#f4d8a4;
+            text-shadow: 0 0 10px rgba(255,215,120,0.6);
+        }
+
+        @media (max-width: 768px){
+            main{ width:95%; padding:25px; margin:20px 0; }
+            h1{ font-size:2rem; line-height:1.2; text-align:center; }
+            p{ font-size:1rem; line-height:1.8; }
+            img{ width:100%; max-width:100%; margin-top:20px; }
+            .menu{ width:100%; display:flex; flex-direction:column; align-items:center; margin-bottom:30px; }
+            .menu button{ width:90%; max-width:350px; font-size:0.95rem; letter-spacing:1px; padding:15px; margin:10px 0; }
+            summary{ font-size:1rem; padding:18px; }
+            .curiosidade{ font-size:0.95rem; line-height:1.8; padding:20px; }
+            a{ word-break:break-word; }
+        }
+</style>
+</head>
+
+<body>
+<div id="fundo-escuro">
+<main>
+
+<h1>PÁGINA 16 — O FINAL DE GOD OF WAR II E A TITANOMAQUIA</h1>
+
+<p>
+O encerramento de God of War II é considerado um dos finais mais épicos da história dos videogames. Após derrotar as três Irmãs do Destino e assumir o controle dos Fios do Destino, Kratos volta no tempo ao exato momento de sua morte em Rodes. Ele recupera a Lâmina do Olimpo e confronta Zeus em um duelo feroz — batalha que só é interrompida pelo sacrifício de Atena, que se joga na frente de Kratos para proteger o pai dos deuses e morre em seus braços, revelando em seus últimos momentos que Zeus é o pai biológico de Kratos.
+</p>
+
+<img src="gow2-atena-sacrificio.jpg" alt="Sacrifício de Atena em God of War II">
+
+<p>Fonte: <a href="https://en.wikipedia.org/wiki/God_of_War_II">https://en.wikipedia.org/wiki/God_of_War_II</a></p>
+
+<p>
+A cena final — a Titanomaquia — é uma declaração de intenções artísticas sem precedentes para a época. Kratos usa o poder dos Fios do Destino para viajar ao passado durante a Grande Guerra entre Deuses e Titãs, resgatando os gigantes no momento de sua derrota e os convocando para uma nova guerra. A sequência mostra Gaia, Cronos, Epimeteu e outros Titãs escalando o Monte Olimpo enquanto os deuses aguardam no topo — uma imagem que combina grandiosidade mitológica com design visual de impacto absoluto, encerrando o jogo com uma promessa de conflito épico que seria cumprida em God of War III.
+</p>
+
+<p>
+A direção de arte dessa sequência final foi amplamente elogiada como um triunfo técnico e narrativo. Em um console com sérias limitações de hardware, o Santa Monica Studio conseguiu criar uma das cenas mais grandiosas já vistas nos videogames, estabelecendo God of War II como o verdadeiro canto do cisne do PlayStation 2.
+</p>
+
+<img src="gow2-titanomaquia.jpg" alt="Titanomaquia - Final de God of War II">
+
+<details>
+<summary>Saiba Mais!</summary>
+<div class="curiosidade">
+⚔ God of War II recebeu o prêmio de "Story and Character" e "Technical Achievement" no BAFTA de 2007, além de ser indicado para "Original Score" — reconhecimentos raros para um jogo de PS2 lançado após o início da era PS3, comprovando que a excelência artística supera as limitações de hardware.
+</div>
+</details>
+
+<p id="fontes">
+📚 Fontes:<br>
+<a href="https://en.wikipedia.org/wiki/God_of_War_II">https://en.wikipedia.org/wiki/God_of_War_II</a><br>
+<a href="https://delfos.net.br/god-of-war-ii/">https://delfos.net.br/god-of-war-ii/</a>
+</p>
+
+</main>
+
+<div class="menu">
+    <a class="botao1" href="projeto-artbook-god-of-war.html"><button>Voltar ao início</button></a>
+    <a class="botao2" href="pg15.html"><button>Voltar Página 15</button></a>
+    <a href="pg17.html"><button>Continuar Página 17</button></a>
+</div>
+
+</div>
+</body>
+</html>
