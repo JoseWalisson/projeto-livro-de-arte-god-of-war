@@ -155,19 +155,19 @@
 
     /* ===== FRASE INFERIOR ===== */
 
-    .quote{
-
-      position:absolute;
-      bottom:40px;
-      width:100%;
-
-      text-align:center;
-
-      color:rgba(255,255,255,0.55);
-
-      font-size:0.9rem;
-      letter-spacing:2px;
-    }
+.quote {
+  position: fixed;        /* troca absolute por fixed */
+  bottom: 20px;           /* menos espaço no mobile */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.75rem;     /* menor no mobile */
+  letter-spacing: 1.5px;
+  padding: 0 16px;        /* evita cortar nas bordas */
+  line-height: 1.4;
+  z-index: 10;
+}
 
     /* Botão de habilitar áudio */
 
@@ -211,6 +211,28 @@
     box-shadow:
     0 0 20px rgba(255,0,0,0.5);
 }
+    @media (max-width: 480px) {
+  .logo {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .menu button {
+    width: 85vw;
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .container {
+    padding-bottom: 80px; /* espaço para a frase não sobrepor */
+  }
+
+  .quote {
+    font-size: 0.7rem;
+    bottom: 16px;
+    letter-spacing: 1px;
+  }
+    }
 
   </style>
 </head>
