@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página 20 - Desafio</title>
+<title>Página 30 - Desafio</title>
 
 <style>
 
@@ -221,12 +221,17 @@ button:hover{
 
 <h1>⚔ TESTE DE CONHECIMENTO</h1>
 
-<p>Qual evento faz Kratos ser traído pelos deuses em God of War 2?</p>
+<p>
+Qual evento marca o início da guerra final contra o Olimpo em God of War III?
+</p>
 
-<button onclick="responder(false)">Ele destrói o Olimpo</button>
-<button onclick="responder(true)">Zeus o engana e o mata parcialmente</button>
-<button onclick="responder(false)">Ele perde seus poderes por vontade própria</button>
-<button onclick="responder(false)">Ares retorna ao poder</button>
+<button onclick="responder(false)">Kratos destrói Esparta</button>
+
+<button onclick="responder(true)">Os Titãs escalam o Monte Olimpo ao lado de Kratos</button>
+
+<button onclick="responder(false)">Ares retorna do submundo</button>
+
+<button onclick="responder(false)">Athena derrota Zeus</button>
 
 <div id="resultado"></div>
 
@@ -235,9 +240,9 @@ button:hover{
 <div class="menu">
 <a class="botao1" href="projeto-artbook-god-of-war.html">
     <button>Voltar ao início</button></a>
-<a class="botao2" href="pg19.html"><button>Voltar Página 19</button>
+<a class="botao2" href="pg29.html"><button>Voltar Página 29</button>
 </a>
-<a href="pg21.html"><button>Continuar Página 21</button></a>
+<a href="pg31.html"><button>Continuar Página 31</button></a>
 </div>
 </div>
 
@@ -253,10 +258,10 @@ r.style.display="block";
 
 if(c){
 r.className="vitoria";
-r.innerHTML="<h2>✔ CORRETO</h2><p>Você lembrou da traição de Zeus contra Kratos em God of War II.</p>";
+r.innerHTML="<h2>✔ CORRETO</h2><p>Os Titãs iniciam a invasão do Olimpo ao lado de Kratos.</p>";
 }else{
 r.className="derrota";
-r.innerHTML="<h2>❌ ERROU</h2><p>Kratos jamais esqueceria a traição do Olimpo.</p>";
+r.innerHTML="<h2>❌ ERROU</h2><p>Os deuses não toleram falhas.</p>";
 document.getElementById("death-screen").style.display="flex";
 }
 }
