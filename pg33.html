@@ -5,115 +5,352 @@
 <title>Página 33</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-        *{ margin:0; padding:0; box-sizing:border-box; }
-
-        img {
-            width:100%;
-            max-width:700px;
-            height:auto;
-            margin-top:30px;
-            border-radius:10px;
-            object-fit:cover;
-            box-shadow: 0 0 25px rgba(0,0,0,0.7);
-            border:2px solid rgba(255,255,255,0.08);
+    <style>
+ 
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
-
-        body{
-            overflow-y:auto;
-            overflow-x:hidden;
+ 
+        body {
+            overflow-y: auto;
+            overflow-x: hidden;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            min-height: 100vh;
+            min-height: 100dvh;
         }
-
-        #fundo-escuro{
+ 
+        img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(0,0,0,0.7);
+            border: 2px solid rgba(255,255,255,0.08);
+        }
+ 
+        #fundo-escuro {
             flex-direction: column;
-            width:100vw;
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            width: 100%;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background:
-                linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.88)),
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.88)
+                ),
                 url('Fundo pg4.png');
-            background-size:cover;
-            background-position:center;
-            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
-        main{
-            width:70%;
-            max-width:1000px;
-            margin-bottom:1em;
-            padding:60px;
-            background:rgba(0,0,0,0.35);
-            border:1px solid rgba(255,255,255,0.08);
-            backdrop-filter:blur(4px);
-            border-radius:10px;
-            color:white;
-            text-align:center;
+ 
+        main {
+            width: 70%;
+            max-width: 1000px;
+            margin-bottom: 1em;
+            padding: 60px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            color: white;
+            text-align: center;
             box-shadow: 0 0 40px rgba(0,0,0,0.6);
         }
-
-        h1{ text-align:left; font-size:4rem; margin-bottom:30px; color:#f4d8a4; }
-        p{ font-size:1.2rem; text-align:justify; line-height:2; color:rgba(255,255,255,0.85); }
-        .botao1, .botao2 { padding-right:1em; }
-
-        .menu button{
-            width:320px; padding:18px; margin:1em 1em;
-            background:linear-gradient(180deg, rgba(70,0,0,0.9), rgba(15,15,15,0.95));
-            border:2px solid #a11; color:#f4d8a4; font-size:1.2rem;
-            letter-spacing:3px; text-transform:uppercase; cursor:pointer; transition:0.3s;
-            box-shadow: 0 0 10px rgba(255,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.08);
+ 
+        h1 {
+            text-align: left;
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: #f4d8a4;
         }
-
-        .menu button:hover{
-            transform:scale(1.05);
-            background:linear-gradient(180deg, rgba(120,0,0,1), rgba(30,0,0,1));
-            box-shadow: 0 0 25px rgba(255,0,0,0.7), 0 0 50px rgba(255,120,0,0.3);
+ 
+        p {
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 2;
+            color: rgba(255,255,255,0.85);
         }
-
-        details{
-            width:100%; margin-top:35px;
-            background:linear-gradient(180deg, rgba(40,0,0,0.85), rgba(10,10,10,0.95));
-            border:2px solid rgba(180,20,20,0.5); border-radius:12px; overflow:hidden;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6), inset 0 0 10px rgba(255,255,255,0.04);
-            transition:0.3s;
+ 
+        #fontes {
+            text-align: left;
+            margin-top: 30px;
         }
-
-        details:hover{ transform:scale(1.01); box-shadow: 0 0 30px rgba(120,0,0,0.5); }
-
-        summary{
-            padding:22px; cursor:pointer; font-size:1.3rem; letter-spacing:3px;
-            color:#f4d8a4; text-transform:uppercase; list-style:none;
-            position:relative; transition:0.3s;
+ 
+        /* ===== MENU ===== */
+ 
+        .botao1, .botao2 {
+            padding-right: 1em;
         }
-
-        summary::-webkit-details-marker{ display:none; }
-        summary::after{ content:"⚔"; position:absolute; right:25px; transition:0.4s; }
-        details[open] summary::after{ transform:rotate(180deg); }
-
-        .curiosidade{
-            padding:25px; border-top:1px solid rgba(255,255,255,0.08);
-            background:rgba(0,0,0,0.45); color:rgba(255,255,255,0.88);
-            line-height:2; font-size:1.05rem; text-align:left;
+ 
+        .menu button {
+            width: 320px;
+            padding: 18px;
+            margin: 1em 1em;
+            background: linear-gradient(
+                180deg,
+                rgba(70,0,0,0.9),
+                rgba(15,15,15,0.95)
+            );
+            border: 2px solid #a11;
+            color: #f4d8a4;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow:
+                0 0 10px rgba(255,0,0,0.3),
+                inset 0 0 10px rgba(255,255,255,0.08);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            min-height: 48px;
+            -webkit-appearance: none;
+            appearance: none;
         }
-
-        #fontes { padding-top:1em; }
-        a{ color:#d8b16a; text-decoration:none; transition:0.3s; }
-        a:hover{ color:#f4d8a4; text-shadow: 0 0 10px rgba(255,215,120,0.6); }
-
-        @media (max-width: 768px){
-            main{ width:95%; padding:25px; margin:20px 0; }
-            h1{ font-size:2rem; line-height:1.2; text-align:center; }
-            p{ font-size:1rem; line-height:1.8; }
-            img{ width:100%; max-width:100%; margin-top:20px; }
-            .menu{ width:100%; display:flex; flex-direction:column; align-items:center; margin-bottom:30px; }
-            .menu button{ width:90%; max-width:350px; font-size:0.95rem; letter-spacing:1px; padding:15px; margin:10px 0; }
-            summary{ font-size:1rem; padding:18px; }
-            .curiosidade{ font-size:0.95rem; line-height:1.8; padding:20px; }
-            a{ word-break:break-word; }
+ 
+        .menu button:hover,
+        .menu button:active {
+            transform: scale(1.05);
+            background: linear-gradient(
+                180deg,
+                rgba(120,0,0,1),
+                rgba(30,0,0,1)
+            );
+            box-shadow:
+                0 0 25px rgba(255,0,0,0.7),
+                0 0 50px rgba(255,120,0,0.3);
         }
-</style>
+ 
+        /* ===== DETAILS ===== */
+ 
+        details {
+            width: 100%;
+            margin-top: 35px;
+            background: linear-gradient(
+                180deg,
+                rgba(40,0,0,0.85),
+                rgba(10,10,10,0.95)
+            );
+            border: 2px solid rgba(180,20,20,0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:
+                0 0 25px rgba(0,0,0,0.6),
+                inset 0 0 10px rgba(255,255,255,0.04);
+            transition: 0.3s;
+        }
+ 
+        details:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 30px rgba(120,0,0,0.5);
+        }
+ 
+        summary {
+            padding: 22px;
+            cursor: pointer;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            color: #f4d8a4;
+            text-transform: uppercase;
+            list-style: none;
+            position: relative;
+            transition: 0.3s;
+        }
+ 
+        summary::-webkit-details-marker {
+            display: none;
+        }
+ 
+        summary::after {
+            content: "⚔";
+            position: absolute;
+            right: 25px;
+            transition: 0.4s;
+        }
+ 
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+ 
+        .curiosidade {
+            padding: 25px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            background: rgba(0,0,0,0.45);
+            color: rgba(255,255,255,0.88);
+            line-height: 2;
+            font-size: 1.05rem;
+            text-align: left;
+        }
+ 
+        a {
+            color: #d8b16a;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+ 
+        a:hover {
+            color: #f4d8a4;
+            text-shadow: 0 0 10px rgba(255,215,120,0.6);
+        }
+ 
+        /* ===== RESPONSIVIDADE MOBILE ===== */
+ 
+        @media (max-width: 768px) {
+ 
+            #fundo-escuro {
+                padding: 20px 0 30px;
+                justify-content: flex-start;
+            }
+ 
+            main {
+                width: 92%;
+                padding: 24px 20px;
+                margin: 20px 0;
+            }
+ 
+            h1 {
+                font-size: clamp(1.4rem, 6vw, 2rem);
+                line-height: 1.3;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+ 
+            p {
+                font-size: clamp(0.9rem, 3.8vw, 1rem);
+                line-height: 1.8;
+                text-align: justify;
+            }
+ 
+            img {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+ 
+            a {
+                word-break: break-word;
+            }
+ 
+            details {
+                margin-top: 24px;
+            }
+ 
+            details:hover {
+                transform: none;
+            }
+ 
+            summary {
+                font-size: clamp(0.9rem, 4vw, 1rem);
+                padding: 16px 50px 16px 18px;
+                letter-spacing: 1px;
+            }
+ 
+            summary::after {
+                right: 18px;
+            }
+ 
+            .curiosidade {
+                font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+                line-height: 1.8;
+                padding: 18px;
+            }
+ 
+            .botao1, .botao2 {
+                padding-right: 0;
+            }
+ 
+            .menu {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 30px;
+                gap: 0;
+            }
+ 
+            .menu a {
+                width: 92%;
+                max-width: 350px;
+            }
+ 
+            .menu button {
+                width: 100%;
+                max-width: 350px;
+                font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+                letter-spacing: 1px;
+                padding: 15px;
+                margin: 8px 0;
+            }
+        }
+ 
+        /* ===== TELAS MUITO PEQUENAS ===== */
+ 
+        @media (max-width: 360px) {
+ 
+            main {
+                width: 96%;
+                padding: 18px 14px;
+            }
+ 
+            h1 {
+                font-size: 1.2rem;
+            }
+ 
+            p {
+                font-size: 0.88rem;
+            }
+        }
+ 
+        /* ===== LANDSCAPE MOBILE ===== */
+ 
+        @media (max-height: 500px) and (orientation: landscape) {
+ 
+            #fundo-escuro {
+                padding: 16px 0 20px;
+            }
+ 
+            main {
+                width: 88%;
+                padding: 20px 24px;
+                margin: 12px 0;
+            }
+ 
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+ 
+            .menu {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 16px;
+            }
+ 
+            .menu a {
+                width: auto;
+            }
+ 
+            .menu button {
+                width: auto;
+                min-width: 180px;
+                padding: 12px 16px;
+                font-size: 0.8rem;
+                margin: 0;
+            }
+        }
+ 
+    </style>
 </head>
 
 <body>
@@ -128,10 +365,10 @@
 Conforme os deuses são derrotados, o mundo entra em colapso. Desastres naturais começam a destruir a Grécia.
 </p>
 
-<img src="gow3-caos.jpg" alt="Caos no mundo mortal">
+<img src="pg33.png" alt="Caos no mundo mortal">
 
 <p>
-Fonte: <a href="https://godofwar.fandom.com/wiki/God_of_War_III">https://godofwar.fandom.com/wiki/God_of_War_III</a>
+<a>Prompt: Mostre o caos na Grécia que vai sendo mostrado conforme Kratos vai matando os Deuses</a>
 </p>
 
 <p>
@@ -142,7 +379,7 @@ Cada deus do Olimpo representa uma força essencial da natureza. Quando Kratos e
 Inundações, pragas, tempestades e destruição se espalham pela civilização grega.
 </p>
 
-<img src="gow3-destruicao.jpg" alt="Destruição da Grécia">
+<!-- <img src="gow3-destruicao.jpg" alt="Destruição da Grécia"> -->
 
 <details>
 <summary>Saiba Mais!</summary>
